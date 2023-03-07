@@ -1,5 +1,6 @@
 package singleton;
 
+// Compare this snippet from src/main/java/singleton/SingletonCollection.java:
 public class SingletonSimulator {
     public static void main(String[] args){
         SingletonLoggerLazyInstantiation lazyLogger1 = SingletonLoggerLazyInstantiation.getInstance();

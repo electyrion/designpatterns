@@ -11,6 +11,7 @@ class SingletonLoggerLazyInstantiation {
         this.level = "Error";
     }
 
+    // Lazy Instantiation - only create the instance when it is needed (when the getInstance method is called)
     public static SingletonLoggerLazyInstantiation getInstance(){
         if(instance == null){
             instance = new SingletonLoggerLazyInstantiation();
@@ -38,6 +39,7 @@ class SingletonLoggerEagerInstantiation {
     private String level;
     private static final SingletonLoggerEagerInstantiation instance = new SingletonLoggerEagerInstantiation();
 
+    // Eager Instantiation - create the instance when the class is loaded (when the class is first used)
     private SingletonLoggerEagerInstantiation(){
         this.name = "Default Logger";
         this.level = "Error";
