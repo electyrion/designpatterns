@@ -13,10 +13,6 @@ Ensure a class only has one instance, and provide a global point of access to it
 - We have a `Logger` class that has a `log` method that logs a message to the console and a `getInstance` method that returns a `Logger` object [source](https://refactoring.guru/design-patterns/singleton/java/example)
 - The `getInstance` method is the global access point to the `Logger` object and the `Logger` class is the singleton class that ensures that only one instance of the `Logger` class exists at any given time in the program execution [source](https://refactoring.guru/design-patterns/singleton/java/example)
 
-## UML
-
-![Singleton UML](https://refactoring.guru/images/patterns/diagrams/singleton/structure-2x.png)
-
 ## Applicability
 
 Use the Singleton pattern when:
@@ -44,5 +40,3 @@ Use the Singleton pattern when:
 ## Relations with Other Patterns
 
 - You can implement the Singleton pattern with the Factory Method pattern, but it's not the only way to do it. The Factory Method pattern lets you defer the choice of the class to instantiate to the subclass. The Singleton pattern doesn't provide such flexibility, as the class of the singleton object is hardcoded into the method that creates it.
-
-[/home/runner/work/Design-Patterns-Java/Design-Patterns-Java/src/main/java/singleton/README.md]
