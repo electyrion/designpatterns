@@ -2,6 +2,14 @@
 
 ## Singleton
 
+Think of a building with a `security` guard at the entrance. The security guard's job is to `make sure that only authorized people can enter the building`. However, there's `only one security guard` - if there were multiple guards, they might not know if someone had already been authorized to enter the building. The security guard is a singleton.
+
+In software development, the singleton pattern works in a similar way. Imagine you have a `piece of code that needs to be accessed from multiple parts` of your program. However, you want to make sure that only one instance of the code is created - if there were multiple instances, they might `not be aware of each other` and could cause problems. The singleton pattern provides a way to `ensure that only one instance` of the code is created and accessed.
+
+For example, imagine you have a program that needs to access a database. You want to `make sure that only one connection to the database is created and used throughout the program`. The singleton pattern provides a way to ensure that only one instance of the database connection is created and used.
+
+So, in short, the singleton design pattern is a way of ensuring that only one instance of a piece of code is created and accessed. Just like a building might have only one security guard to ensure that only authorized people enter, a software program might use the singleton pattern to ensure that only one instance of a piece of code is created and accessed.
+
 - Singleton is a creational design pattern that lets you ensure that a class has only one instance, while providing a global access point to this instance [source](https://refactoring.guru/design-patterns/singleton)
 
 ## Intent
