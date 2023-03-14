@@ -55,3 +55,53 @@ class FlipUpCommand implements Command {
         theLight.turnOn();
     }
 }
+
+class FlipDownCommand implements Command {
+    private Light theLight;
+
+    public FlipDownCommand(Light light) {
+        this.theLight = light;
+    }
+
+    @Override
+    public void execute() {
+        theLight.turnOff();
+    }
+}
+
+class Light {
+    private boolean isOn = false;
+
+    public void turnOn() {
+        isOn = true;
+        System.out.println("The light is on");
+    }
+
+    public void turnOff() {
+        isOn = false;
+        System.out.println("The light is off");
+    }
+
+    public boolean isOn() {
+        return isOn;
+    }
+}
+
+class Switch {
+    private Command flipUpCommand;
+    private Command flipDownCommand;
+
+    public Switch(Command flipUpCmd, Command flipDownCmd) {
+        this.flipUpCommand = flipUpCmd;
+        this.flipDownCommand = flipDownCmd;
+    }
+
+    public void flipUp() {
+        flipUpCommand.execute();
+    }
+
+    public void flipDown() {
+        flipDownCommand.execute();
+    }
+}
+```
