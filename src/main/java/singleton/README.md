@@ -48,3 +48,12 @@ Use the Singleton pattern when:
 ## Relations with Other Patterns
 
 - You can implement the Singleton pattern with the Factory Method pattern, but it's not the only way to do it. The Factory Method pattern lets you defer the choice of the class to instantiate to the subclass. The Singleton pattern doesn't provide such flexibility, as the class of the singleton object is hardcoded into the method that creates it.
+
+## Problem
+
+- Menimbulkan issue multithreading
+    Cara mengatasi: double check locking
+- Menimbulkan issue lazy initialization (hanya dibuat saat dipanggil saja, terdapat pada static block) menimbulkan masalah jika sama2 dipanggil oleh thread yang berbeda, maka akan membuat 2 instance. Prinsip singleton akan terganggu
+    Cara mengatasi: eager initialization. Membuat instance pada saat class di load. Masih terdapat issue juga di multithread (race condition).
+    solving yg lebih baik: double check locking, akan terdapat flag siapa yg sedang menggunakan akses singleton, lock akses singleton, dan unlock akses singleton. thread lain akan menunggu terlebih dahulu sampai thread yg sedang menggunakan akses singleton selesai. Synchronized access to the singleton instance.
+    

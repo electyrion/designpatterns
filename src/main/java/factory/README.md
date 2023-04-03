@@ -2,6 +2,8 @@
 
 ## Factory
 
+Abstract Factory is a creational design pattern that lets you produce families of related objects `without specifying their concrete classes`.
+
 Think of a car manufacturer that produces `several different models` of cars. Each model might have different features, such as different engines, colors, and options. However, all of the cars are `manufactured using a similar set of processes and techniques`. The car manufacturer might use an abstract factory to manage the manufacturing process for all of their different car models.
 
 In software development, the abstract factory pattern works in a similar way. Imagine you're building a software application that needs to `create different types` of objects. Each object might have different properties or methods, but they all need to be `created using a similar set of processes and techniques`. An abstract factory provides a way to `manage the creation` process for all of these different objects.
